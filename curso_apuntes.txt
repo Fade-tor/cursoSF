@@ -23,3 +23,11 @@ Recien despues de esto podemos instalas los nuevos controladores. PAra ellos usa
 Ya creado el controlador de ruta ahora podemos usarlo pero para ello siempre siempre debemos pasar por el index.php
 De esta manera entonces para ir debemos completar la ruta con ..../public/index.php/<nombre de la ruta>
 
+Para controla las rutas no hace falta trabajar sobre el .yaml directamente en el controlador se establece el nombre de la ruta en:
+
+				class UserController extends AbstractController
+				{
+				    #[Route('/users', name: 'app_user')] --ACA SE CAMBIA LA RUTA Y EL NOMBRE DE LA RUTA
+				    public function index(): JsonResponse
+				    {
+
