@@ -1,0 +1,25 @@
+Instalar composer
+no hay que cambiar nada de lo que viene
+descargar directo en el c el instalador
+
+instalar symfony
+ahora hay dos caminos para instalar un proyecto symfony
+uno es instalar un website completo pero esto nos instalaría un monton de dependencias que quiza no usemos:
+create-project symfony/website-skeleton <nombre del proyecto>
+Por otro lado se puede instalar un proyecto basico al que luego le vamos a ir instalando las librerias que necesitemos
+create-project symfony/skeleton <nombre del proyecto>
+Lo tenemos que crear en la carpeta htdocs de xamp. supongo que para que se ejecute el servidor despues. En mi caso no hace falta ya que el servidor esta apuntado a la carpeta desarrollo que es donde tengo el proyecto symfony.
+
+Rutas
+Las rutas de manejan con archivos .yaml
+los controladores se instalan con comandos y van instalados en la carpeta controller
+debemos instalar las librarias Make y Doctrine/annotations con composer
+ 		composer require make
+ 		composer require doctrine/annotations
+ 		el doctrine annotations sirve para poder sopoertar las anotaciones en el codigo con /* * * */
+Recien despues de esto podemos instalas los nuevos controladores. PAra ellos usamos:
+		php bin/console make:controller <nombre controlador>
+
+Ya creado el controlador de ruta ahora podemos usarlo pero para ello siempre siempre debemos pasar por el index.php
+De esta manera entonces para ir debemos completar la ruta con ..../public/index.php/<nombre de la ruta>
+
