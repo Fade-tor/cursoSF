@@ -27,7 +27,7 @@ Para controla las rutas no hace falta trabajar sobre el .yaml directamente en el
 
 				class UserController extends AbstractController
 				{
-				    #[Route('/users', name: 'app_user')] --ACA SE CAMBIA LA RUTA Y EL NOMBRE DE LA RUTA
+				    #[Route('/user', name: 'app_user')] --ACA SE CAMBIA LA RUTA Y EL NOMBRE DE LA RUTA
 				    public function index(): JsonResponse
 				    {
 
